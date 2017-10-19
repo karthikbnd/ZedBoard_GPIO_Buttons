@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Oct 12 09:19:40 2017
+# Process ID: 12124
+# Current directory: C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.runs/synth_1
+# Command line: vivado.exe -log design_led_buttons_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_led_buttons_wrapper.tcl
+# Log file: C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.runs/synth_1/design_led_buttons_wrapper.vds
+# Journal file: C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_led_buttons_wrapper.tcl -notrace

@@ -1,0 +1,91 @@
+10:01:25 INFO  : Registering command handlers for SDK TCF services
+10:01:25 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\kab\Desktop\workspace\ZedBoard_GPIO_Buttons\ZedBoard_GPIO_Buttons.sdk\temp_xsdb_launch_script.tcl
+10:01:27 INFO  : XSCT server has started successfully.
+10:01:29 INFO  : Successfully done setting XSCT server connection channel  
+10:01:29 INFO  : Processing command line option -hwspec C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper.hdf.
+10:01:29 INFO  : Successfully done setting SDK workspace  
+10:16:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:16:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570623" && level==0} -index 1' command is executed.
+10:16:41 INFO  : FPGA configured successfully with bitstream "C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper_hw_platform_0/design_led_buttons_wrapper.bit"
+10:17:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570623" && level==0} -index 1' command is executed.
+10:17:02 INFO  : 'fpga -state' command is executed.
+10:17:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:17:02 INFO  : Jtag cable 'Digilent Zed 210248570623' is selected.
+10:17:02 INFO  : 'jtag frequency' command is executed.
+10:17:02 INFO  : Sourcing of 'C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:17:02 INFO  : Context for 'APU' is selected.
+10:17:02 INFO  : Hardware design information is loaded from 'C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper_hw_platform_0/system.hdf'.
+10:17:03 INFO  : Context for 'APU' is selected.
+10:17:03 INFO  : 'stop' command is executed.
+10:17:07 INFO  : 'ps7_init' command is executed.
+10:17:08 INFO  : 'ps7_post_config' command is executed.
+10:17:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:17:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:17:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:17:09 INFO  : The application 'C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/GPIO_LED_BUTTONS_INTP/Debug/GPIO_LED_BUTTONS_INTP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:17:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+loadhw C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+dow C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/GPIO_LED_BUTTONS_INTP/Debug/GPIO_LED_BUTTONS_INTP.elf
+----------------End of Script----------------
+
+10:17:10 INFO  : Memory regions updated for context APU
+10:17:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:17:11 INFO  : 'con' command is executed.
+10:17:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+con
+----------------End of Script----------------
+
+10:17:11 INFO  : Launch script is exported to file 'C:\Users\kab\Desktop\workspace\ZedBoard_GPIO_Buttons\ZedBoard_GPIO_Buttons.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\debug_gpio_led_buttons_intp.tcl'
+10:24:18 INFO  : Disconnected from the channel tcfchan#1.
+10:24:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570623" && level==0} -index 1' command is executed.
+10:24:20 INFO  : 'fpga -state' command is executed.
+10:24:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:24:20 INFO  : Jtag cable 'Digilent Zed 210248570623' is selected.
+10:24:20 INFO  : 'jtag frequency' command is executed.
+10:24:20 INFO  : Sourcing of 'C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:24:20 INFO  : Context for 'APU' is selected.
+10:24:22 INFO  : Hardware design information is loaded from 'C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper_hw_platform_0/system.hdf'.
+10:24:22 INFO  : Context for 'APU' is selected.
+10:24:23 INFO  : 'stop' command is executed.
+10:24:26 INFO  : 'ps7_init' command is executed.
+10:24:26 INFO  : 'ps7_post_config' command is executed.
+10:24:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:24:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:24:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:24:27 INFO  : The application 'C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/GPIO_LED_BUTTONS_INTP/Debug/GPIO_LED_BUTTONS_INTP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:24:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+loadhw C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/design_led_buttons_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+dow C:/Users/kab/Desktop/workspace/ZedBoard_GPIO_Buttons/ZedBoard_GPIO_Buttons.sdk/GPIO_LED_BUTTONS_INTP/Debug/GPIO_LED_BUTTONS_INTP.elf
+----------------End of Script----------------
+
+10:24:28 INFO  : Memory regions updated for context APU
+10:24:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:24:28 INFO  : 'con' command is executed.
+10:24:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570623"} -index 0
+con
+----------------End of Script----------------
+
+10:24:28 INFO  : Launch script is exported to file 'C:\Users\kab\Desktop\workspace\ZedBoard_GPIO_Buttons\ZedBoard_GPIO_Buttons.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\debug_gpio_led_buttons_intp.tcl'
+14:27:24 INFO  : Disconnected from the channel tcfchan#2.
